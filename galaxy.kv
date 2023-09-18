@@ -1,0 +1,20 @@
+#:import menu menu
+
+MainWidget:
+
+<MainWidget>:
+    canvas.before:
+        Rectangle:
+            size:self.size
+            source:'nature1.jpg'
+    menu_widget:menu_widget
+    perspective_point_x:self.width/2
+    perspective_point_y:self.height*.75
+    MenuWidget:
+        id:menu_widget
+    Label:
+        text:"SCORE: "+root.score_txt
+        font_size:dp(30)
+        font_name:'Eurostile.ttf'
+        size_hint:.2,.2
+        pos_hint:{'x':0,'top':1}
